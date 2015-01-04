@@ -1,0 +1,7 @@
+[user]
+	name = Ogonna Iwunze
+	email = ogonna.iwunze@gmail.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
