@@ -27,9 +27,12 @@ Bundle 'rodjek/vim-puppet'
 " For automatic text alignment e.g. hash-rockets (=>) of a hash
 Bundle 'godlygeek/tabular'
 
+" Git wrapper for vim
+Bundle 'tpope/vim-fugitive'
+
 " For syntax checking of several languages including Ruby, R, Python, Puppet
 " and many more. (For puppet, the executable needs to be available)
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,8 +58,14 @@ set clipboard=unnamed
 "set softtabstop=4	   " makes the spaces feel like real tabs 
 autocmd FileType python set tabstop=4|set shiftwidth=4|set softtabstop=4|set expandtab
 "autocmd FileType ruby set tabstop=2|set shiftwidth=4|set expandtab
-"autocmd BufEnter *.rb set tabstop=2|set shiftwidth=4|set expandtab
+autocmd BufEnter *.rb,*.pp,*.yaml,*.yml set tabstop=2|set shiftwidth=2|set expandtab
+autocmd BufEnter Gemfile,Rakefile,Guardfile set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType * set tabstop=4|set shiftwidth=4|set noexpandtab
+
+" Highlight column 
+set colorcolumn=80
+" Set color of column (1=DarkRed, 5=DarkMagenta, 7=LightGrey)
+highlight colorcolumn ctermbg=5
 
 " To turn off expandtab for editing makefiles
 autocmd FileType make setlocal noexpandtab
@@ -69,14 +78,14 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
-" Syntastic plugin recommended settings
-" start:syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"" Syntastic plugin recommended settings
+"" start:syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" end:syntastic
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"" end:syntastic
