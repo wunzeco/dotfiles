@@ -1,4 +1,5 @@
 CLICOLOR=1
+LSCOLORS=ExFxCxDxBxegedabagaced
 HISTSIZE=100000
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
