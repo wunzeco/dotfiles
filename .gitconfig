@@ -5,3 +5,9 @@
 	helper = osxkeychain
 [push]
 	default = simple
+[alias]
+	lg = log --graph
+[merge]
+	ff = no
+[core]
+	editor = /usr/bin/vim
