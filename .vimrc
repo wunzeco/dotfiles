@@ -30,6 +30,10 @@ Bundle 'godlygeek/tabular'
 " Git wrapper for vim
 Bundle 'tpope/vim-fugitive'
 
+" NERD tree allows you to explore your filesystem and open files and
+" directories
+Bundle 'scrooloose/nerdtree'
+
 " For syntax checking of several languages including Ruby, R, Python, Puppet
 " and many more. (For puppet, the executable needs to be available)
 "Bundle 'scrooloose/syntastic'
