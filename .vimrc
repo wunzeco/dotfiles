@@ -60,9 +60,10 @@ set clipboard=unnamed
 "set tabstop=4         " Insert 4 spaces for a tab
 "set shiftwidth=4      " Number of space characters inserted for indentation 
 "set softtabstop=4	   " makes the spaces feel like real tabs 
+autocmd BufEnter *.py,*.sh,*.groovy set tabstop=4|set shiftwidth=4|set softtabstop=4|set expandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set softtabstop=4|set expandtab
 "autocmd FileType ruby set tabstop=2|set shiftwidth=4|set expandtab
-autocmd BufEnter *.rb,*.pp,*.yaml,*.yml set tabstop=2|set shiftwidth=2|set expandtab
+autocmd BufEnter *.rb,*.pp,*.yaml,*.yml,*.html set tabstop=2|set shiftwidth=2|set expandtab
 autocmd BufEnter Gemfile,Rakefile,Guardfile set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType * set tabstop=4|set shiftwidth=4|set noexpandtab
 
@@ -93,3 +94,8 @@ filetype plugin on    " Enable filetype-specific plugins
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 "" end:syntastic
+
+"set listchars=trail:·
+"set list
+
+"autocmd BufWritePre *.rb,*.py,*.yml :%s/\s\+$//e
